@@ -1,0 +1,1 @@
+readlines.o: ../readlines.c

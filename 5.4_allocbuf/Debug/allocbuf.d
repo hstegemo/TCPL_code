@@ -1,0 +1,1 @@
+allocbuf.o: ../allocbuf.c

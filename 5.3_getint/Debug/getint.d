@@ -1,0 +1,1 @@
+getint.o: ../getint.c
