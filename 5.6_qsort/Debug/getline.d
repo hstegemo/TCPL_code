@@ -1,0 +1,1 @@
+getline.o: ../getline.c
