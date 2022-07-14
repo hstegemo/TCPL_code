@@ -2,7 +2,6 @@
 #include <stdio.h>
 
 void tcpl_qsort(char* v[], int left, int right){    // avoid using qsort from the standard library
-    printf("in qsort: left=%d, right=%d", left, right);
     int i, last;
     void swap(char* s[], int i, int j);
 
@@ -17,8 +16,8 @@ void tcpl_qsort(char* v[], int left, int right){    // avoid using qsort from th
         if(strcmp(v[i], v[left]) < 0)
             swap(v, ++last, i);
     swap(v, left, last);
-    swap(v, left, last-1);
-    swap(v, last+1, right);
+    tcpl_qsort(v, left, last-1);
+    tcpl_qsort(v, last+1, right);
 }
 
 void swap(char *v[], int i, int j){
